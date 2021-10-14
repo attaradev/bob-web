@@ -4,7 +4,7 @@ import { Avatar } from '../modules/common/avatar';
 import Button from '../modules/common/button';
 import { TextArea } from '../modules/common/text-area';
 
-export const PreviewVideo = ({ setOpenVideoPreview, previewVideo,handleVideoUpload }) => {
+export const PreviewVideo = ({ setOpenVideoPreview, previewVideoUrl,handleVideoUpload }) => {
   return (
     <>
       <PreviewContainer aria-label='Bottom drawer'>
@@ -25,7 +25,8 @@ export const PreviewVideo = ({ setOpenVideoPreview, previewVideo,handleVideoUplo
             </VideoContent>
 
             <VideoThumbnail>
-              <img src={previewVideo} alt='Sing' />
+              {/* Kindly add the video tag */}
+              <img src={previewVideoUrl} alt='Sing' />
             </VideoThumbnail>
             <div className='uploadsBtn'>
               <Button onClick={handleVideoUpload}>Upload</Button>

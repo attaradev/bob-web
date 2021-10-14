@@ -25,8 +25,8 @@ export const UploadVideo = () => {
   return (
     <>
       <Wrapper>
-        <div onClick={handleDocumentClick} className='flex--column'>
-          <div className='flex--column'>
+        <div onClick={handleDocumentClick}>
+          <div>
             <VideoUploadIcon size={30} color='red' />
           </div>
         </div>
@@ -44,7 +44,7 @@ export const UploadVideo = () => {
       {selectedVideo ? (
         <PreviewVideo
           handleVideoUpload={handleVideoUpload}
-          previewVideo={previewVideoUrl}
+          previewVideoUrl={previewVideoUrl}
           setOpenVideoPreview={setSelectedVideo}
         />
       ) : null}
@@ -60,4 +60,5 @@ const Wrapper = styled.div`
   height: 100px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top:1rem;
 `;
